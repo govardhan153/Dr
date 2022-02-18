@@ -23,8 +23,8 @@ body {
 .about-img::after {
   position: absolute;
   content: "";
-  right: -40px;
-  top: 30px;
+  right: -60px;
+  top: 20px;
   border: 5px solid rgba(238, 69, 27, 0.5);
   width: 100%;
   /* z-index: -1; */
@@ -37,7 +37,7 @@ body {
   padding: 20px;
 }
 .about {
-  background-color: #131f33;
+  background-color: #818a91;
   padding: 40px 0px;
 }
 .about h2 {
@@ -46,23 +46,63 @@ body {
   font-family: lobster;
 }
 
-/* .card {
-  width: 350px;
-} */
+.wrapper {
+  display: flex;
+  padding: 0px;
+  margin-top: 20px;
+}
+.wrapper .icon {
+  margin: 0px 6px;
+  cursor: pointer;
+
+  z-index: 2;
+}
+
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 1.75em;
+  vertical-align: -15%;
+  color: #fff;
+}
+.wrapper .icon span {
+  height: 40px;
+  width: 40px;
+  display: block;
+  /* background-color: rgb(211, 36, 30); */
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
 .about-text p {
   font-size: 26px;
-  color: #cb612f;
+  color: #fff;
   padding: 20px 0px;
   font-family: lobster;
   text-align: start;
   /* width: 250px; */
 }
+
 .about-txt {
   font-size: 24px;
   color: #fff;
   padding: 20px 16px;
   font-family: "Times New Roman", Times, serif;
   text-align: start;
+}
+.dr {
+  font-size: 40px;
+  letter-spacing: 3px;
+  /* color: #cb612f; */
+}
+.mbbs {
+  font-size: 26px;
+  letter-spacing: 5px;
+}
+.lap {
+  font-size: 26px;
+  letter-spacing: 2px;
 }
 .ip {
   border-radius: 5px;

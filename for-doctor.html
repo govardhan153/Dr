@@ -11,23 +11,41 @@
       name="description"
       content="Web site created using create-react-app"
     />
-  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>For DOCTORS </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 <style>
+  .case h3{
+    text-transform: uppercase;
+           letter-spacing: 0px;
+          
+           font-weight: 500;
+           color: #d2691e;
+  }
 .doctor ul li{
-margin: 5px 0px;
-padding: 10px 0px;
+margin: 25px 15px;
+padding: 10px ;
 background-color: #ddd;
 text-align: center;
 }
 .doctor ul li:hover{
-margin: 5px 0px;
-padding: 10px 0px;
+margin: 25px 15px;
+padding: 10px ;
 color: #fff;
 background-color: chocolate;
 text-align: center;
+}
+.see{
+  border-radius: 5px;
+  background-color: #cb612f;
+  border: 2px solid #cb612f;
+  padding: 9px 10px;
+  width: 320px;
+  color: #fff;
+  height: 60px;
 }
 .view {
   border-radius: 5px;
@@ -36,25 +54,72 @@ text-align: center;
   padding: 9px 10px;
   width: 300px;
   color: #fff;
+  border-radius: 20px;
   /* background-color: #0d6efd; */
   color: #05414e;
   height: 43px;
   text-align: center;
 }
+.view:hover {
+  border-radius: 5px;
+  /* border-color: #0d6efd; */
+  border: 2px solid #d2d8d9;
+  padding: 9px 10px;
+  width: 300px;
+  color: #fff;
+  border-radius: 20px;
+  background-color: #cb612f;
+  /* color: #05414e; */
+  height: 43px;
+  text-align: center;
+}
+.doctors-sec{
+  display: flex;
+  justify-content: space-between;
+}
+.doctor ul>li{
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px;
+}
+.case p{
+  font-size: 22px;
+  line-height: 24px;
+  font-family: lobster;
+  text-align: justify;
+  margin-top: 20px;
+  padding: 30px 0px 20px 0px;
+}
+.lap li{
+  text-indent: 0;
+    font-size: 17px;
+    list-style: none;
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0;  
+}
 </style>
 </head>
 <body >
-    <div class="container">
-        <div class="container">
+  <div class="conatiner-fluid mt-4">
+    <img width="100%" height="400" src="images/2.jpg" alt="">
+   
+  </div>
+    <div class="container-fluid  mt-4" style="background-color: #d2691e;">
+        <div class="container doctors-sec">
             <div class="upcoming">
-                <button type="button" class="view Show" style="margin:10px 0px 10px 7%;font-weight: 800;transform: translate(0%, 10px); " >Upcoming Surgical Events</button>
+                <button type="button" class="view " style="margin:10px 0px 10px 7%; " > <strong>UPCOMING SURGICAL EVENTS</strong></button>
             </div>
+            <div class="upcoming">
+              <button type="button" class="view  obs" style="margin:10px 0px 10px 7%;" ><strong>CASE OBSERVATIONS</strong> </button>
+          </div>
             <div class="academic">
-                <button type="button" class="view " style="margin:10px 0px 10px 7%;font-weight: 800;transform: translate(250%, -50px); " >Acadmics Trainings</button>
+                <button type="button" class="view views" style="margin:10px 0px 10px 7%; " > <strong>ACADEMIC TRAININGS</strong></button>
             </div>
         </div>
     </div>
-   <div class="container-fluid" id="target">
+    
+   <div class="container-fluid" id="target" style="display: none;">
        <div class="container">
         <div class="">
            <div class="row">
@@ -64,11 +129,11 @@ text-align: center;
                    
                    </div>
               </div>
-              <div class="col-md-5 mt-4">
+              <div class="col-md-7 mt-4">
                 <div class="test-text">
                     <div class="card doctor" style="padding:15px 0px;transform: translate(0px, 50px);">
                         <ul style="list-style: none;">
-                            <li>Topic Name</li>
+                            <li style="background-color:chocolate ; color: #fff;">Topic Name</li>
                             <li>Time</li>
                             <li>Sponsors</li>
                         </ul>
@@ -81,22 +146,273 @@ text-align: center;
           </div>
        </div>
    </div>
+
+   <div class="container-fluid mt-4 " id="cas" style="display: none;">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12 case">
+           <h3 >LAPAROSCOPIC  PROCEDURES AVAILABLE FOR CASE OBSERVATION</h3>
+           <hr style="margin-bottom: 10px;
+           margin-top: 10px; background-color: #d2691e; height:13px;">
+         <div class="row" style="display: flex;">
+           
+             <div class="col-md-6">
+              <ul class="lap">
+                <li><span style="font-weight: 400;">Bladder Cancer</span></li>
+                <li>LAR</li>
+                <li><span style="font-weight: 400;">Neuroendocrine Tumour</span></li>
+                <li><span style="font-weight: 400;">Breast Cancer</span></li>
+                <li><span style="font-weight: 400;"> Cervical Cancer</span></li>
+                </ul>
+             </div>
+             <div class="col-md-6">
+              <ul class="lap">
+                <li><span style="font-weight: 400;">Lung Cancer</span></li>
+                <li>LAR</li>
+                <li><span style="font-weight: 400;">Rectal Cancer</span></li>
+                <li><span style="font-weight: 400;">Gallbladder Cancer Breast Surgery</span></li>
+                <li><span style="font-weight: 400;">Breast Surgery</span></li>
+              </ul>
+            
+           </div>
+         </div>
+        
+         </div>
+        
+       </div>
+       <hr class="mt-4">
+       <div class="btn mt-4" style="transform: translate(130%,0px); font-size: 17px;"> <button class="see "> <strong>SEE WHAT'S ON THE SCHEEDULE</strong> </button> </div>
+       <hr>
+       <div class="case">
+         <h3>CONTACT AND TRAVEL INFORMATION</h3>
+      
+         <div class="row mt-2">
+           <div class="col-md-4">
+              <h4>Case Observation Opportunities</h4>
+              <hr>
+              <h6 style="padding: 10px;">If you are interested in a case observation using the da Vinci Xi with Dr. Brian Harkins, please contact us<h/6>
+           </div>
+           <div class="col-md-4">
+             <h4>Travel Information</h4>
+             <hr>
+             <p style="padding: 10px;">
+              Airport
+            </p>
+            <h6>Houston George Bush Intercontinental Airport</h6>
+            <p>Our Location</p>
+            <h6>Tomball Regional Medical Center</h6>
+            <p style="margin-top:0px;">33 min (28.8 miles) via TX-249 N <br>
+             <a href="" style="color: #cb612f;"> Click here for more details</a></p>
+          </div>
+          <div class="col-md-4">
+             <h4>Required Documentation</h4>
+             <hr>
+           <h6 style="padding: 10px;">
+            Upon booking the case observation date you will receive all required documentation via DocuSign for completion.
+
+           </h6>  
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ <div class="container-fluid mt-4" id="diploma" style="display: none;">
+     <div class="container">
+        <div class="row">
+       
+            
+                 <div class="  col-md-6 " style="margin-top: 20px; padding: 20px;">
+                    <div class="card" style=" padding: 30px;">
+                    <ul>
+                        <li >
+                           <label for="">FELLOWSHIP COURSES IN MINIMAL ACCESS SURGERY</label> 
+                        </li>
+                        <li>
+                   <label for="">DIPLOMA IN BASIC GENERAL LAPAROSCOPY</label>    
+                      </li>
+                      <li>
+                        DIPLOMA IN BASIC GYNAEC LAPAROSCOPY
+                      </li>
+                     
+                    </ul>
+                 </div>
+             </div>
+             <div class=" col-md-6 " style="margin-top: 20px; padding: 20px;">
+              <div class="card" style=" padding: 30px;">
+              <ul>
+                
+                <li>
+                  CALT DIPLOMA IN ADVANCED LAPAROSCOPY AND BARIATRIC SURGERY
+                </li>
+                <li>
+                  CALT DIPLOMA IN ADVANCED GYNAEC LAPAROSCOPY
+                </li>
+                <li>
+                  CALT DIPLOMA IN MINIMAL ACCESS ONCOSURGERY
+
+                </li>
+              </ul>
+           </div>
+       </div>
+      
+         </div>
+   
+     </div>
+ </div>
+ <footer class="footer-section">
+  <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                    <i class="fa fa-location-check"></i>
+                      <div class="cta-text">
+                          <h4>Find us</h4>
+                          <span>1010 Avenue, sw 54321, New Delhi</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fa fa-phone"></i>
+                      <div class="cta-text">
+                          <h4>Call us</h4>
+                          <span>9876543210 0</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fa fa-envelope-open"></i>
+                      <div class="cta-text">
+                          <h4>Mail us</h4>
+                          <span>mail@info.com</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 mb-50">
+                  <div class="footer-widget">
+                      <!-- <div class="footer-logo">
+                          <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a>
+                      </div> -->
+                      <div class="footer-text">
+                          <p> Dr.Arvind Kumar with over 25 years of experience is a leading Laparoscopic and Oncosurgeon in North India practising at Sir Gangaram Hospital,New Delhi. Dr.Arvind is formally trained byDr. Shailesh Puntambekar who is one of the world’s renowned Laparoscopic Oncosurgeons. In addition to his clinical activities, Dr.Arvind is active in research & education and has been providing fellowship & mentorship to  several surgeons from India as well as abroad.
+
+                          </p>
+                      </div>
+                      <div class="footer-social-icon">
+                          <span>Follow us</span>
+                          <a href="#"><i class="fa fa-facebook-f facebook-bg"></i></a>
+                          <a href="#"><i class="fa fa-twitter twitter-bg"></i></a>
+                          <a href="#"><i class="fa fa-whatsapp fa-lg google-bg"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Useful Links</h3>
+                      </div>
+                      <ul>
+                          <li><a href="#">Dr.Arvind</a></li>
+                          <li><a href="#">about</a></li>
+                          <li><a href="#">cancer surgeries</a></li>
+                          <li><a href="#">blogs</a></li>
+                          <li><a href="#">Laparoscopic Surgeries</a></li>
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">other surgeries</a></li>
+                          <li><a href="#">for Doctors</a></li>
+                          <li><a href="#">Contact us</a></li>
+                          <li><a href="#">Latest News</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Subscribe</h3>
+                      </div>
+                      <div class="footer-text mb-25">
+                          <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                      </div>
+                      <div class="subscribe-form">
+                          <form action="#">
+                              <input type="text" placeholder="Email Address">
+                              <button><i class="fa fa-telegram " style="font-size: 35px;"></i></button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
+  <div class="copyright-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                  <div class="copyright-text">
+                      <p>Copyright &copy; 2022, All Right Reserved <a href="https://codepen.io/anupkumar92/">Dr.Arvind Kumar</a></p>
+                  </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                  <div class="footer-menu">
+                      <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Terms</a></li>
+                          <li><a href="#">Privacy</a></li>
+                          <li><a href="#">Policy</a></li>
+                          <li><a href="#">Contact</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
- $('.Show').click(function() {
-    $('#target').show(500);
-    $('.Show').hide(0);
-    $('.Hide').show(0);
+      $(document).ready(function(){
+  $(".view").click(function(){
+    $("#target").show();
+    $("#diploma").hide();
+    $("#cas").hide();
+  });
+  $(".views").click(function(){
+    $("#target").hide();
+    $("#diploma").show();
+    $("#cas").hide();
+  });
+  $(".obs").click(function(){
+    $("#target").hide();
+    $("#diploma").hide();
+    $("#cas").show();
+  });
 });
-$('.Hide').click(function() {
-    $('#target').hide(500);
-    $('.Show').show(0);
-    $('.Hide').hide(0);
+    $(document).ready(function(){
+  $(".btn1").click(function(){
+    $(".target").hide();
+  });
+  $(".btn2").click(function(){
+    $("p").show();
+  });
 });
-$('.toggle').click(function() {
-    $('#target').toggle('slow');
-});
+//  $('.Show').click(function() {
+//     $('#target').show(500);
+//     $('.Show').hide(0);
+//     $('.Hide').show(0);
+// });
+// $('.Hide').click(function() {
+//     $('#target').hide(500);
+//     $('.Show').show(0);
+//     $('.Hide').hide(0);
+// });
+// $('.toggle').click(function() {
+//     $('#target').toggle('slow');
+// });
     </script>
 </html>
